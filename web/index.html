@@ -142,15 +142,29 @@
             <li class="l-section section">
               <div class="work">
                 <h2>Image Prediction</h2>
-                <img class="work center" src="assets/img/Jan2023.gif" alt="Italian Trulli"
+                <img id="predictionImage" class="work center" src="assets/img/0.gif" alt="Image Prediction"
                   style="width:800px;height:375px;">
-                <button class="button button1">Green</button>
+                <div class="intro--options">
+                  <button class="button button2" onmouseover="changeImage('assets/img/-2.gif')">-2</button>
+                  <button class="button button2" onmouseover="changeImage('assets/img/-1.gif')">-1</button>
+                  <button class="button button2" onmouseover="changeImage('assets/img/0.gif')">0</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/1.gif')">1</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/2.gif')">2</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/3.gif')">3</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/4.gif')">4</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/5.gif')">5</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/6.gif')">6</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/7.gif')">7</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/8.gif')">8</button>
+                  <button class="button button1" onmouseover="changeImage('assets/img/9.gif')">9</button>
+                </div>
               </div>
             </li>
             <li class="l-section section">
               <div class="work">
                 <h2>Graph Prediction</h2>
-
+                <img class="work center" src="assets/img/sim5.png" alt="Image Prediction"
+                  style="width:800px;height:375px;">
               </div>
             </li>
             <li class="l-section section">
@@ -181,7 +195,12 @@
       <li>Contact</li>
     </ul>
   </div>
-
+  <script>
+    function changeImage(fileName) {
+      let img = document.querySelector("#predictionImage");
+      img.setAttribute('src', fileName);
+    }
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>
     window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
